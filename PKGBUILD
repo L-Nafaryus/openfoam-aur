@@ -2,8 +2,8 @@
 
 pkgbase=openfoam
 pkgname=openfoam-org
-_subver=20211007
-_pkgver=9
+_subver=20220831
+_pkgver=10
 pkgver=${_pkgver}.${_subver}
 pkgrel=1
 pkgdesc="The open source CFD toolbox (www.openfoam.org)"
@@ -69,7 +69,7 @@ package() {
 
     # Add source file
     echo "export FOAM_INST_DIR=/opt/${_distpkgbase}" > ${pkgdir}/etc/profile.d/openfoam-${_pkgver}.sh
-    echo "alias ofoam=\"source \${FOAM_INST_DIR}/${_distpkgbase}-${_pkgver}/etc/bashrc\"" >> ${pkgdir}/etc/profile.d/openfoam-${_pkgver}.sh
+    echo "alias source_foam=\"source \${FOAM_INST_DIR}/${_distpkgbase}-${_pkgver}/etc/bashrc\"" >> ${pkgdir}/etc/profile.d/openfoam-${_pkgver}.sh
     chmod 755 "${pkgdir}/etc/profile.d/openfoam-${_pkgver}.sh"
 
     # Add stub thirdparty directory to keep openfoam happy
