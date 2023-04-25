@@ -2,7 +2,7 @@
 
 pkgbase=openfoam
 pkgname=openfoam-org
-_subver=20220831
+_subver=20230119
 _pkgver=10
 pkgver=${_pkgver}.${_subver}
 pkgrel=1
@@ -18,7 +18,7 @@ provides=('openfoam')
 conflicts=('openfoam-com')
 source=("https://github.com/OpenFOAM/$_gitname/archive/refs/tags/$_subver.tar.gz")
 install="${pkgbase}.install"
-md5sums=('3fd048d2e2e3b2393633e549dc317706')
+md5sums=('53b4a232c6a3c5f48fd08e6d69d2f832')
 
 # Note: Disabled ParaView
 prepare() {
